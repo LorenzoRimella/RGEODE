@@ -6,4 +6,4 @@ install.packages("devtools")
 
 library(devtools)
 
-install_github("LorenzoRimella/R-Geode")
+install_github("LorenzoRimella/RGeode")
