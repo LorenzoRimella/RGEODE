@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // Cexptr
 NumericVector Cexptr(int n, double lambda, NumericVector range);
-RcppExport SEXP RGeode_Cexptr(SEXP nSEXP, SEXP lambdaSEXP, SEXP rangeSEXP) {
+RcppExport SEXP _RGeode_Cexptr(SEXP nSEXP, SEXP lambdaSEXP, SEXP rangeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // Cgammatr
 NumericVector Cgammatr(int n, double A, double B, NumericVector range);
-RcppExport SEXP RGeode_Cgammatr(SEXP nSEXP, SEXP ASEXP, SEXP BSEXP, SEXP rangeSEXP) {
+RcppExport SEXP _RGeode_Cgammatr(SEXP nSEXP, SEXP ASEXP, SEXP BSEXP, SEXP rangeSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -34,7 +34,7 @@ END_RCPP
 }
 // CgenerateTau_root
 NumericVector CgenerateTau_root(NumericVector U, NumericVector t, double a, int d);
-RcppExport SEXP RGeode_CgenerateTau_root(SEXP USEXP, SEXP tSEXP, SEXP aSEXP, SEXP dSEXP) {
+RcppExport SEXP _RGeode_CgenerateTau_root(SEXP USEXP, SEXP tSEXP, SEXP aSEXP, SEXP dSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -48,7 +48,7 @@ END_RCPP
 }
 // CgenerateU_root
 NumericVector CgenerateU_root(NumericVector prodTau, int N, double SIGMAS, NumericMatrix Z);
-RcppExport SEXP RGeode_CgenerateU_root(SEXP prodTauSEXP, SEXP NSEXP, SEXP SIGMASSEXP, SEXP ZSEXP) {
+RcppExport SEXP _RGeode_CgenerateU_root(SEXP prodTauSEXP, SEXP NSEXP, SEXP SIGMASSEXP, SEXP ZSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -62,10 +62,10 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"RGeode_Cexptr", (DL_FUNC) &RGeode_Cexptr, 3},
-    {"RGeode_Cgammatr", (DL_FUNC) &RGeode_Cgammatr, 4},
-    {"RGeode_CgenerateTau_root", (DL_FUNC) &RGeode_CgenerateTau_root, 4},
-    {"RGeode_CgenerateU_root", (DL_FUNC) &RGeode_CgenerateU_root, 4},
+    {"_RGeode_Cexptr", (DL_FUNC) &_RGeode_Cexptr, 3},
+    {"_RGeode_Cgammatr", (DL_FUNC) &_RGeode_Cgammatr, 4},
+    {"_RGeode_CgenerateTau_root", (DL_FUNC) &_RGeode_CgenerateTau_root, 4},
+    {"_RGeode_CgenerateU_root", (DL_FUNC) &_RGeode_CgenerateU_root, 4},
     {NULL, NULL, 0}
 };
 

@@ -1,62 +1,8 @@
-#' @title Missing Data Imputation (GEODE_impute)
-#'
-#' @description
-#' Generate pseudo-observation from a Multivariate Normal
-#' Distribution to substitute Missing Data.
-#'
-#'
-#' @param U          array \cr
-#'                   The estimation for u.
-#'
-#' @param SIGMAS     double \cr
-#'                   The estimation for sigma.
-#'
-#' @param LAMBDA     matrix \cr
-#'                   The matrix W.
-#'
-#' @param MU         array \cr
-#'                   The mean.
-#'
-#'
-#' @param AA         array \cr
-#'                   The sufficient statistic A.
-#'
-#' @param Z          matrix \cr
-#'                   The sufficient statistic Z.
-#'
-#' @param id_m       array \cr
-#'                   The array with the rows containing missing data.
-#'
-#' @param pos_m      list \cr
-#'                   The list containing the position of the missing data
-#'                   for each row.
-#'
-#' @param IND        array \cr
-#'                   The set of accepted Principal Axes.
-#'
-#'
-#'
-#' @return \code{GEODE_impute} returns a value:
-#' \item{y_m}{     list \cr
-#'                 A list containing the simulated Missing Data.
-#'         }
-#'
-#'
-#'
-#'
-#' @references
-#' \itemize{
-#'
-#'  \item   [1] Y. Wang, A. Canale, D. Dunson.
-#'          "Scalable Geometric Density Estimation" (2016).\cr
-#'          The implementation of GEODE_impute is inspired to the
-#'          Matlab implementation of GEODE_impute by Ye Wang.
-#' }
-#'
-#'
-#' @author L. Rimella, \email{lorenzo.rimella@hotmail.it}
-#'
-#' @import stats MASS
+# Missing Data Imputation (GEODE_impute)
+#
+# Generate pseudo-observation from a Multivariate Normal
+# Distribution to substitute Missing Data.
+
 
 GEODE_impute<- function(U,SIGMAS,LAMBDA,MU,AA,Z,id_m,pos_m,IND)
 {
